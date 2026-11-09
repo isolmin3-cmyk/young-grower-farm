@@ -192,6 +192,7 @@ function initializeScrollEffects() {
     ['.center-heading', 'down'],
     ['.showcase-card', 'up'],
     ['.corporate-pillars > a', 'up'],
+    ['.brand-story-row, .brand-line, .history-highlights, .history-photos', 'up'],
     ['.field-copy', 'left'],
     ['.field-picture', 'right'],
     ['.promise-inner > div', 'up'],

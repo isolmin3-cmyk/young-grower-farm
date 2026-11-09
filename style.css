@@ -349,3 +349,58 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
 .ceo-signature { margin-top: 35px; text-align: right; }
 .ceo-signature strong { font-size: 22px; color: var(--ink); }
 @media(max-width:760px) { .corporate-pillars { grid-template-columns: 1fr; gap: 20px; padding-bottom: 60px; } }
+
+.history-highlights { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-block: 32px; }
+.history-highlights > div { border-top: 2px solid #98ab80; background: #f4f6ef; padding: 22px 18px; }
+.history-highlights strong { display: block; font-size: 30px; font-weight: 550; }
+.history-highlights span { font-size: 12px; color: var(--muted); }
+.history-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 23px; margin-block: 30px; }
+.history-photos .editorial { margin: 0; }
+.history-photos img { height: 240px; object-fit: cover; }
+.timeline { margin-top: 42px; border-top: 1px solid var(--line); }
+.timeline-year { border-bottom: 1px solid var(--line); }
+.timeline-year summary { position: relative; cursor: pointer; display: flex; align-items: center; gap: 30px; list-style: none; padding: 22px 40px 22px 0; }
+.timeline-year summary::-webkit-details-marker { display: none; }
+.timeline-year summary > span:first-child { font-size: 33px; font-weight: 550; line-height: 1.5; color: var(--green); }
+.timeline-year summary::after { content: "+"; position: absolute; right: 10px; top: 27px; font-size: 24px; }
+.timeline-year[open] summary::after { content: "−"; }
+.year-summary { font-size: 15px; color: var(--muted); }
+.timeline-events { padding-left: 112px; padding-bottom: 22px; }
+.timeline-events > div { display: grid; grid-template-columns: 50px 1fr; gap: 15px; padding-block: 10px; }
+.timeline-events time { font-size: 13px; color: var(--gold); padding-top: 2px; }
+.timeline-events p { font-size: 15px; line-height: 1.85; }
+.timeline-source { display: block; margin-left: 112px; padding-bottom: 22px; font-size: 12px; color: var(--green); }
+.brand-story-row { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding-block: 45px; border-bottom: 1px solid var(--line); }
+.brand-story-row > div:first-child img { width: 100%; height: 360px; object-fit: cover; border-radius: 22px; }
+.brand-story-row h3 { font-size: 27px; margin: 12px 0 18px; }
+.brand-story-row p { font-size: 15px; }
+.brand-story-row p + p { margin-top: 14px; }
+.brand-story-row.reverse > div:first-child { order: 2; }
+.brand-line { padding-block: 45px; border-bottom: 1px solid var(--line); }
+.brand-line h3 { font-size: 29px; margin: 12px 0 19px; }
+.brand-product-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-block: 28px; }
+.brand-product-pair > img { width: 100%; height: 330px; object-fit: contain; border: 1px solid var(--line); border-radius: 20px; background: #fff; padding: 18px; }
+.brand-product-pair .editorial { margin: 0; }
+.brand-product-pair .editorial img { height: 360px; object-fit: cover; }
+.brand-landscape img { max-height: 520px; object-fit: cover; object-position: center 70%; }
+@media(max-width:760px) {
+  .history-highlights { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .history-highlights strong { font-size: 27px; }
+  .history-photos { grid-template-columns: 1fr; }
+  .history-photos img { height: 230px; }
+  .timeline-year summary { gap: 18px; }
+  .timeline-year summary > span:first-child { font-size: 29px; }
+  .year-summary { font-size: 13px; }
+  .timeline-events { padding-left: 0; }
+  .timeline-events > div { gap: 8px; grid-template-columns: 44px 1fr; }
+  .timeline-events p { font-size: 14px; }
+  .timeline-source { margin-left: 0; }
+  .brand-story-row { grid-template-columns: 1fr; gap: 25px; padding-block: 34px; }
+  .brand-story-row.reverse > div:first-child { order: initial; }
+  .brand-story-row > div:first-child img { height: 300px; }
+  .brand-story-row h3 { font-size: 25px; }
+  .brand-line h3 { font-size: 25px; }
+  .brand-product-pair { gap: 12px; }
+  .brand-product-pair > img { height: 200px; padding: 10px; }
+  .brand-product-pair .editorial img { height: 210px; }
+}
