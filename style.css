@@ -130,6 +130,7 @@ nav { display: flex; gap: clamp(15px,2.8vw,45px); align-items: center; }
 .strip-phone { font-size: 35px; font-weight: 650; line-height: 1.5; letter-spacing: -.035em; }
 .strip-phone:hover { color: white; }
 .strip-inner p { font-size: 12px; color: #d2ddcc; }
+.site-footer { background: #f3f5ef; border-top: 1px solid #e2e7dc; }
 .footer-top { display: flex; justify-content: space-between; align-items: center; gap: 35px; padding-block: 40px; border-bottom: 1px solid var(--line); }
 .footer-brand { font-size: 28px; font-weight: 750; letter-spacing: -.06em; }
 .footer-brand small { display: block; font-size: 10px; letter-spacing: .1em; font-weight: 650; }
