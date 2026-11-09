@@ -440,3 +440,20 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
  .ceo-number { font-size: 42px; }
  .ceo-row figure { border-radius: 30px 0 30px 0; }
 }
+
+/* Shared subpage spacing; the centered history timeline keeps its own layout. */
+:root { --detail-top: 72px; --detail-bottom: 96px; --article-gap: 40px; }
+.detail-layout:not(:has(.history-article)) { width: min(100%,1440px); max-width: 1440px; padding-block: var(--detail-top) var(--detail-bottom); }
+.detail-layout:not(:has(.history-article)) .detail-article > .eyebrow:first-child { margin-top: 0; }
+.detail-layout:not(:has(.history-article)) .detail-article > h2 { margin-top: 12px; }
+.detail-layout:not(:has(.history-article)) .detail-article > .lead { margin-top: 20px; max-width: 72ch; }
+.detail-layout:not(:has(.history-article)) .article-section { margin-top: var(--article-gap); }
+.detail-layout:not(:has(.history-article)) .editorial { margin-block: var(--article-gap); }
+.detail-layout:not(:has(.history-article)) .article-bottom { margin-top: var(--article-gap); }
+.detail-layout:not(:has(.history-article)) .detail-article > :last-child { margin-bottom: 0; }
+.brand-story-row, .brand-line { padding-block: var(--article-gap); }
+.ceo-row + .ceo-row { margin-top: 80px; padding-top: 80px; }
+@media (max-width: 760px) {
+ :root { --detail-top: 40px; --detail-bottom: 64px; --article-gap: 28px; }
+ .ceo-row + .ceo-row { margin-top: 48px; padding-top: 48px; }
+}
