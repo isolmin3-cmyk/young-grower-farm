@@ -7,8 +7,8 @@
 <meta name="theme-color" content="#243f32">
 <title>우리 농산물의 가치를 전하다 | 영글어농장</title>
 <link rel="icon" href="mark.svg">
-<link rel="stylesheet" href="style.css">
-<script defer src="app.js">
+<link rel="stylesheet" href="style.css?v=motion-1">
+<script defer src="app.js?v=motion-1">
 </script>
 </head>
 <body>
@@ -96,8 +96,10 @@
 </div>
 </header>
 <main id="main">
-<section class="brand-hero">
-<img class="hero-photo" src="assets/recipe-13.jpg" alt="블루베리 열매와 동결건조 분말" loading="eager" decoding="async">
+<section class="brand-hero" aria-roledescription="캐러셀" aria-label="영글어농장 소개">
+<div class="hero-track">
+<div class="hero-slide is-active" aria-roledescription="슬라이드" aria-label="1 / 2" aria-hidden="false">
+<img class="hero-photo" src="assets/recipe-13.jpg" alt="블루베리 열매와 동결건조 분말" width="966" height="644" decoding="async" fetchpriority="high">
 <div class="hero-overlay">
 </div>
 <div class="wrap hero-content">
@@ -111,9 +113,37 @@
 </a>
 </div>
 </div>
+</div>
+<div class="hero-slide" aria-roledescription="슬라이드" aria-label="2 / 2" aria-hidden="true" inert>
+<img class="hero-photo" src="assets/blueberry-3.jpg" alt="영글어농장 유리온실과 수확 현장" width="966" height="594" decoding="async" fetchpriority="auto">
+<div class="hero-overlay">
+</div>
+<div class="wrap hero-content">
+<span class="eyebrow">FROM OUR FARM TO YOUR TABLE</span>
+<h2>한 알의 수확에서<br>일상의 먹거리까지.</h2>
+<p>계절을 살피는 재배와 정성스러운 수확.<br>농장에서 시작한 이야기를<br>다양한 식품으로 이어갑니다.</p>
+<div class="hero-actions">
+<a class="button white" href="cultivation.html">재배 현장 둘러보기<span aria-hidden="true">↗</span>
+</a>
+<a class="hero-link" href="processing.html">가공 이야기<span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+</div>
+</div>
 <div class="hero-bottom wrap">
 <span>자연에서 시작해, 일상으로 이어지는 먹거리</span>
-<a href="#our-company">아래로 살펴보기 ↓</a>
+<div class="hero-controls" aria-label="첫 화면 전환">
+<button class="hero-prev" aria-label="이전 슬라이드">←</button>
+<div class="hero-dots">
+<button aria-label="첫 번째 소개 보기" aria-current="true" data-slide="0">
+</button>
+<button aria-label="두 번째 소개 보기" aria-current="false" data-slide="1">
+</button>
+</div>
+<button class="hero-next" aria-label="다음 슬라이드">→</button>
+<button class="hero-pause" aria-label="자동 전환 일시정지" aria-pressed="false">Ⅱ</button>
+</div>
 </div>
 </section>
 <section id="our-company" class="section wrap company-intro">
@@ -152,7 +182,8 @@
 <h2>농산물의 맛을,<br class="mobile-break"> 일상 속 다양한 모습으로</h2>
 <p>신선한 원물에서 간편한 가공품까지, 영글어농장의 제품을 만나보세요.</p>
 </div>
-<div class="showcase-grid">
+<div class="product-carousel">
+<div class="showcase-grid" id="product-track" tabindex="0" aria-label="대표 제품 목록">
 <a class="showcase-card" href="blueberry.html">
 <div class="showcase-photo">
 <img class="" src="assets/1000000024.jpg" alt="블루베리 공식 제품 사진" loading="lazy" decoding="async">
@@ -219,6 +250,14 @@
 <span class="round-arrow" aria-hidden="true">↗</span>
 </div>
 </a>
+</div>
+<div class="product-controls">
+<span class="product-position" aria-live="polite">제품 목록</span>
+<div>
+<button class="product-prev" aria-label="이전 제품">←</button>
+<button class="product-next" aria-label="다음 제품">→</button>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -346,6 +385,63 @@
 </a>
 <p>정성껏 기르고, 새롭게 담아<br>우리 농산물의 가치를 전합니다.</p>
 <a href="https://blog.naver.com/youngrowerfarm/" target="_blank" rel="noopener">공식 블로그 ↗</a>
+</div>
+<div class="sitemap">
+<div>
+<h3>회사 소개</h3>
+<a class="" href="overview.html">기업 개요<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="philosophy.html">우리의 생각<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="history.html">성장 이야기<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="location.html">오시는 길<span aria-hidden="true">↗</span>
+</a>
+</div>
+<div>
+<h3>재배·가공</h3>
+<a class="" href="cultivation.html">재배 현장<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="selection.html">선별·포장<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="processing.html">농산물 가공<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="development.html">제품 개발<span aria-hidden="true">↗</span>
+</a>
+</div>
+<div>
+<h3>제품 소개</h3>
+<a class="" href="blueberry.html">블루베리<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="rice.html">보위강 버섯쌀<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="chips.html">동결건조 과일칩<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="powders.html">과일 분말<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="mushroom.html">버섯 분말·진액<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="peach.html">설아복숭아·신선식품<span aria-hidden="true">↗</span>
+</a>
+</div>
+<div>
+<h3>농장 소식</h3>
+<a class="" href="innovation.html">기업 소식<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="season.html">제철 농산물 소식<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="recipes.html">제품 활용 이야기<span aria-hidden="true">↗</span>
+</a>
+</div>
+<div>
+<h3>사업 문의</h3>
+<a class="" href="partnership.html">유통·납품 상담<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="gifts.html">선물·단체 구성<span aria-hidden="true">↗</span>
+</a>
+<a class="" href="contact.html">연락처·상담 안내<span aria-hidden="true">↗</span>
+</a>
+</div>
 </div>
 <div class="footer-bottom">
 <span>© 영글어농장</span>
