@@ -51,97 +51,6 @@ document.addEventListener('keydown', (event) => {
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-function initializeHero() {
-  const hero = document.querySelector('.brand-hero');
-  if (!hero) return;
-
-  const track = hero.querySelector('.hero-track');
-  const slides = Array.from(hero.querySelectorAll('.hero-slide'));
-  const dots = Array.from(hero.querySelectorAll('[data-slide]'));
-  const pauseButton = hero.querySelector('.hero-pause');
-  let currentIndex = 0;
-  let timer = null;
-  let manuallyPaused = false;
-  let pointerInside = false;
-  let focusInside = false;
-  let onScreen = true;
-
-  function showSlide(index) {
-    currentIndex = (index + slides.length) % slides.length;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    slides.forEach((slide, slideIndex) => {
-      const active = slideIndex === currentIndex;
-      slide.classList.toggle('is-active', active);
-      slide.setAttribute('aria-hidden', String(!active));
-      slide.inert = !active;
-    });
-    dots.forEach((dot, dotIndex) => {
-      dot.setAttribute('aria-current', String(dotIndex === currentIndex));
-    });
-  }
-
-  function updateTimer() {
-    window.clearInterval(timer);
-    timer = null;
-    if (manuallyPaused || pointerInside || focusInside || reducedMotion.matches || document.hidden || !onScreen) return;
-    timer = window.setInterval(() => showSlide(currentIndex + 1), 5000);
-  }
-
-  function selectSlide(index) {
-    showSlide(index);
-    updateTimer();
-  }
-
-  hero.querySelector('.hero-prev').addEventListener('click', () => selectSlide(currentIndex - 1));
-  hero.querySelector('.hero-next').addEventListener('click', () => selectSlide(currentIndex + 1));
-  dots.forEach((dot) => {
-    dot.addEventListener('click', () => selectSlide(Number(dot.dataset.slide)));
-  });
-  pauseButton.addEventListener('click', () => {
-    manuallyPaused = !manuallyPaused;
-    pauseButton.setAttribute('aria-pressed', String(manuallyPaused));
-    pauseButton.setAttribute('aria-label', manuallyPaused ? '자동 전환 재생' : '자동 전환 일시정지');
-    pauseButton.textContent = manuallyPaused ? '▷' : 'Ⅱ';
-    updateTimer();
-  });
-  hero.addEventListener('pointerenter', (event) => {
-    pointerInside = event.pointerType === 'mouse';
-    updateTimer();
-  });
-  hero.addEventListener('pointerleave', () => {
-    pointerInside = false;
-    updateTimer();
-  });
-  hero.addEventListener('focusin', () => {
-    focusInside = true;
-    updateTimer();
-  });
-  hero.addEventListener('focusout', (event) => {
-    focusInside = hero.contains(event.relatedTarget);
-    updateTimer();
-  });
-  hero.querySelector('.hero-controls').addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowRight') {
-      event.preventDefault();
-      selectSlide(currentIndex + 1);
-    }
-    if (event.key === 'ArrowLeft') {
-      event.preventDefault();
-      selectSlide(currentIndex - 1);
-    }
-  });
-  document.addEventListener('visibilitychange', updateTimer);
-  reducedMotion.addEventListener('change', updateTimer);
-  if ('IntersectionObserver' in window) {
-    const heroObserver = new IntersectionObserver(([entry]) => {
-      onScreen = entry.isIntersecting;
-      updateTimer();
-    });
-    heroObserver.observe(hero);
-  }
-  updateTimer();
-}
-
 function initializeProductCarousel() {
   const track = document.getElementById('product-track');
   if (!track) return;
@@ -248,7 +157,6 @@ function initializeHistoryLineAnimations() {
   document.body.classList.add('history-motion-ready');
 }
 
-initializeHero();
 initializeProductCarousel();
 initializeScrollEffects();
 initializeHistoryLineAnimations();

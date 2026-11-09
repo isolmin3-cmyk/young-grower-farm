@@ -408,3 +408,5 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
 @media(prefers-reduced-motion:reduce) {
   .history-motion-ready .history-phase li { opacity: 1; transform: none; transition: none; }
 }
+
+.hero-static .hero-photo { animation: none; transform: none; }
