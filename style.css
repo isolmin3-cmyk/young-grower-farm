@@ -459,3 +459,28 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
 }
 
 .brand-landscape img { max-height: none; height: auto; object-fit: contain; }
+
+/* Embedded Google map and matching visit information. */
+.location-card { display: grid; grid-template-columns: 1.1fr 1fr; margin-top: 40px; border: 1px solid var(--line); overflow: hidden; border-radius: 20px; }
+.location-map { min-width: 0; background: #edf1e8; }
+.location-map iframe { display: block; width: 100%; height: 100%; min-height: 590px; }
+.location-info { padding: clamp(28px,4vw,58px); align-self: center; }
+.location-info h3 { margin: 14px 0 28px; font-size: 30px; }
+.location-address { color: var(--ink); font-size: clamp(21px,2vw,28px); font-weight: 650; line-height: 1.6; }
+.location-contacts { margin: 30px 0; display: grid; gap: 16px; }
+.location-contacts > div { display: grid; grid-template-columns: 75px minmax(0,1fr); gap: 14px; font-size: 15px; }
+.location-contacts dt { color: var(--muted); }
+.location-contacts dd { margin: 0; overflow-wrap: anywhere; }
+.location-contacts small { font-size: 12px; color: var(--muted); }
+.location-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.location-actions .button { font-size: 13px; padding-inline: 20px; }
+@media (max-width: 900px) {
+ .location-card { grid-template-columns: 1fr; }
+ .location-map iframe { height: 380px; min-height: 0; }
+}
+@media (max-width: 480px) {
+ .location-card { margin-top: 28px; }
+ .location-map iframe { height: 320px; }
+ .location-info { padding: 28px 22px; }
+ .location-info h3 { font-size: 26px; }
+}
