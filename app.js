@@ -191,6 +191,7 @@ function initializeScrollEffects() {
     ['.intro-copy', 'right'],
     ['.center-heading', 'down'],
     ['.showcase-card', 'up'],
+    ['.corporate-pillars > a', 'up'],
     ['.field-copy', 'left'],
     ['.field-picture', 'right'],
     ['.promise-inner > div', 'up'],

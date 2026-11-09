@@ -144,10 +144,7 @@ nav { display: flex; gap: clamp(15px,2.8vw,45px); align-items: center; }
 .detail-hero { padding-block: 55px 60px; background: linear-gradient(110deg,#edf2e6,#f7f6ef); border-block: 1px solid var(--line); }
 .detail-hero h1 { font-size: clamp(34px,4vw,56px); margin-top: 17px; }
 .detail-hero p { font-size: 18px; margin-top: 12px; }
-.detail-layout { display: grid; grid-template-columns: 205px minmax(0,1fr); gap: clamp(35px,7vw,110px); padding-block: 65px 100px; }
-aside > .eyebrow { margin-bottom: 16px; }
-aside a { display: flex; justify-content: space-between; font-size: 14px; border-bottom: 1px solid var(--line); padding-block: 14px; }
-aside a[aria-current] { color: var(--green); font-weight: 750; border-bottom-color: var(--green); }
+.detail-layout { max-width: 1120px; padding-block: 65px 100px; }
 .detail-article h2 { font-size: clamp(28px,3vw,40px); margin-top: 13px; }
 .lead { margin-top: 20px; font-size: 18px; }
 .editorial { margin: 30px 0; }
@@ -261,10 +258,7 @@ figcaption a { text-decoration: underline; text-underline-offset: 3px; }
   .footer-top { align-items: start; flex-wrap: wrap; gap: 22px; }
   .sitemap { grid-template-columns: 1fr 1fr; gap: 27px; }
   .sitemap a { min-height: 36px; }
-  .detail-layout { grid-template-columns: 1fr; padding-top: 25px; gap: 38px; }
-  aside { display: flex; flex-wrap: wrap; gap: 0 18px; }
-  aside > .eyebrow { width: 100%; margin-bottom: 4px; }
-  aside a { font-size: 13px; gap: 13px; }
+  .detail-layout { padding-top: 35px; }
   .detail-hero { padding-block: 35px; }
   .detail-hero p { font-size: 16px; }
   .detail-products { grid-template-columns: 1fr; }
@@ -352,3 +346,11 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
   .dropdown:not([hidden]) { animation: none; }
   .motion-ready .reveal { opacity: 1; transform: none !important; transition: none; }
 }
+
+.corporate-pillars { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; padding-bottom: 85px; }
+.corporate-pillars > a { padding: 28px; border-top: 2px solid #9caf88; background: #f5f7f0; border-radius: 0 0 18px 18px; }
+.corporate-pillars h3 { margin: 17px 0 13px; font-size: 23px; }
+.corporate-pillars p { font-size: 14px; }
+.ceo-signature { margin-top: 35px; text-align: right; }
+.ceo-signature strong { font-size: 22px; color: var(--ink); }
+@media(max-width:760px) { .corporate-pillars { grid-template-columns: 1fr; gap: 20px; padding-bottom: 60px; } }
