@@ -408,11 +408,3 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
 @media(prefers-reduced-motion:reduce) {
   .history-motion-ready .history-phase li { opacity: 1; transform: none; transition: none; }
 }
-
-/* Keep each history entry on one line within the alternating timeline. */
-.history-phase ul { display: block; max-width: 100%; overflow-x: auto; padding-bottom: 8px; }
-.history-phase li { width: max-content; min-width: 100%; white-space: nowrap; margin-bottom: 13px; }
-.history-phase:nth-child(even) li { margin-left: auto; }
-@media(max-width:760px) {
-  .history-phase:nth-child(even) li { margin-left: 0; }
-}
