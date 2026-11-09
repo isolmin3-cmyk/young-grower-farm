@@ -193,8 +193,8 @@ function initializeScrollEffects() {
     ['.showcase-card', 'up'],
     ['.corporate-pillars > a', 'up'],
     ['.brand-story-row, .brand-line', 'up'],
-    ['.history-phase:nth-child(odd)', 'right'],
-    ['.history-phase:nth-child(even)', 'left'],
+    ['.history-phase:nth-child(odd) > .phase-period, .history-phase:nth-child(odd) > h3', 'right'],
+    ['.history-phase:nth-child(even) > .phase-period, .history-phase:nth-child(even) > h3', 'left'],
     ['.field-copy', 'left'],
     ['.field-picture', 'right'],
     ['.promise-inner > div', 'up'],
@@ -229,9 +229,29 @@ function initializeScrollEffects() {
   });
 }
 
+
+function initializeHistoryLineAnimations() {
+  const lines = document.querySelectorAll('.history-phase li');
+  if (!lines.length || reducedMotion.matches || !('IntersectionObserver' in window)) return;
+
+  const lineObserver = new IntersectionObserver((entries) => {
+    const enteringLines = entries.filter((entry) => entry.isIntersecting);
+    enteringLines.forEach((entry, index) => {
+      entry.target.style.setProperty('--line-delay', `${index * 110}ms`);
+      entry.target.classList.add('is-line-visible');
+      entry.target.closest('.history-phase').classList.add('is-visible');
+      lineObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+
+  lines.forEach((line) => lineObserver.observe(line));
+  document.body.classList.add('history-motion-ready');
+}
+
 initializeHero();
 initializeProductCarousel();
 initializeScrollEffects();
+initializeHistoryLineAnimations();
 
 const siteHeader = document.querySelector('header');
 window.addEventListener('scroll', () => {
