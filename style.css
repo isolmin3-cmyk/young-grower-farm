@@ -592,6 +592,7 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
 }
 
 .brand-story-row > .chip-set-photo img { object-fit: contain; }
+.chip-intro-copy > p:first-of-type { margin-top: 20px; }
 
 #fruit-chip-products,
 #fruit-chip-products + .detail-products .item > div { text-align: center; }
