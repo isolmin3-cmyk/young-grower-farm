@@ -502,3 +502,9 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
   .cultivation-gallery-grid { gap: 12px; }
   .cultivation-gallery img { height: clamp(112px,27vw,180px); border-radius: 12px; }
 }
+
+.processing-article .brand-story-row > div:first-child img {
+  width: min(100%, 360px);
+  height: auto;
+  margin-inline: auto;
+}
