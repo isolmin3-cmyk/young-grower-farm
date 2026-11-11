@@ -582,6 +582,7 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .development-products .product-card { display: flex; flex-direction: column; }
+.motion-ready .development-products .product-card.reveal { opacity: 1; }
 .development-products .product-image img { aspect-ratio: 4 / 3; }
 .development-products .product-copy { display: flex; flex: 1; flex-direction: column; }
 .development-products .product-copy h3 { margin-top: 0; }
