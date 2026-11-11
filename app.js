@@ -109,6 +109,8 @@ function initializeScrollEffects() {
     ['.history-phase:nth-child(even) > .phase-period, .history-phase:nth-child(even) > h3', 'left'],
     ['.field-copy', 'left'],
     ['.field-picture', 'right'],
+    ['.certificate-story > .company-certificate', 'left'],
+    ['.certificate-story > .certificate-copy', 'right'],
     ['.promise-inner > div', 'up'],
     ['.section-title', 'up'],
     ['.news-card', 'up'],
