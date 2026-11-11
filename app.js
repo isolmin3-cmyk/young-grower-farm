@@ -114,6 +114,8 @@ function initializeScrollEffects() {
     ['.history-phase:nth-child(even) > .phase-period, .history-phase:nth-child(even) > h3', 'left'],
     ['.field-copy', 'left'],
     ['.field-picture', 'right'],
+    ['.ceo-row:not(.ceo-row-reverse) > figure, .ceo-row-reverse > .ceo-copy', 'left'],
+    ['.ceo-row:not(.ceo-row-reverse) > .ceo-copy, .ceo-row-reverse > figure', 'right'],
     ['.certificate-story > .company-certificate, .illustrated-story:not(.reverse) > .story-photo, .illustrated-story.reverse > .story-copy', 'left'],
     ['.certificate-story > .certificate-copy, .illustrated-story:not(.reverse) > .story-copy, .illustrated-story.reverse > .story-photo', 'right'],
     ['.promise-inner > div', 'up'],
