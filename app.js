@@ -101,6 +101,7 @@ function initializeScrollEffects() {
     ['.center-heading', 'down'],
     ['.showcase-card', 'up'],
     ['.corporate-pillars > a', 'up'],
+    ['.cultivation-card', 'up'],
     ['.brand-story-row, .brand-line', 'up'],
     ['.history-phase:nth-child(odd) > .phase-period, .history-phase:nth-child(odd) > h3', 'right'],
     ['.history-phase:nth-child(even) > .phase-period, .history-phase:nth-child(even) > h3', 'left'],
