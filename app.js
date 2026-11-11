@@ -103,6 +103,7 @@ function initializeScrollEffects() {
     ['.corporate-pillars > a', 'up'],
     ['.cultivation-card:not(.processing-cards .cultivation-card)', 'up'],
     ['.processing-cards .cultivation-card', 'up', 220],
+    ['.development-products .product-card', 'up', 220],
     ['.brand-story-row:not(.cultivation-article .brand-story-row), .brand-line', 'up'],
     ['.cultivation-article .brand-story-row:not(.reverse)', 'left'],
     ['.cultivation-article .brand-story-row.reverse', 'right'],
