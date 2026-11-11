@@ -485,17 +485,20 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
  .location-info h3 { font-size: 26px; }
 }
 
-.cultivation-feature { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: clamp(24px,5vw,72px); }
-.cultivation-feature h2 { line-height: 1.35; }
-.cultivation-feature img, .cultivation-gallery img { width: 100%; height: clamp(200px,26vw,320px); object-fit: cover; border-radius: 20px; }
-.cultivation-gallery img { height: clamp(160px,20vw,240px); }
+
+.cultivation-cards, .cultivation-gallery-grid { display: grid; gap: 24px; }
+.cultivation-cards { grid-template-columns: repeat(3,minmax(0,1fr)); margin-bottom: var(--article-gap); }
+.cultivation-card { overflow: hidden; border-radius: 16px; background: var(--paper); }
+.cultivation-card img, .cultivation-gallery img { width: 100%; height: clamp(160px,18vw,240px); object-fit: cover; }
+.cultivation-card-copy { padding: clamp(18px,2.4vw,30px); }
+.detail-article .cultivation-card h2 { margin: 0 0 10px; font-size: clamp(20px,2vw,25px); line-height: 1.4; }
+.cultivation-card p { font-size: 15px; line-height: 1.8; }
+.cultivation-gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.cultivation-gallery img { border-radius: 20px; }
 .cultivation-gallery figure:last-child img { object-position: center 77%; }
-.cultivation-notes, .cultivation-gallery-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
-.cultivation-notes { margin-block: var(--article-gap); }
-.detail-layout .cultivation-notes > .article-section { margin-top: 0; padding: clamp(20px,3vw,32px); border-radius: 16px; background: var(--paper); }
 .cultivation-gallery h2 { margin: 0 0 18px; font-size: clamp(23px,2.5vw,32px); }
 @media (max-width: 760px) {
-  .cultivation-feature, .cultivation-notes { grid-template-columns: minmax(0,1fr); gap: 16px; }
+  .cultivation-cards { grid-template-columns: minmax(0,1fr); gap: 16px; }
   .cultivation-gallery-grid { gap: 12px; }
   .cultivation-gallery img { height: clamp(112px,27vw,180px); border-radius: 12px; }
 }
