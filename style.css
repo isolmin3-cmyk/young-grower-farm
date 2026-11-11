@@ -592,7 +592,7 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
 }
 
 .brand-story-row > :is(.chip-set-photo, .mushroom-intro-photo) img { object-fit: contain; }
-:is(.chip-intro-copy, .powder-intro-copy, .mushroom-intro-copy, .peach-intro-copy, .rice-intro-copy) > p:first-of-type { margin-top: 20px; }
+:is(.chip-intro-copy, .powder-intro-copy, .mushroom-intro-copy, .peach-intro-copy, .rice-intro-copy, .blueberry-intro-copy) > p:first-of-type { margin-top: 20px; }
 
 :is(#fruit-chip-products, #fruit-powder-products, #mushroom-products, #fresh-products),
 :is(#fruit-chip-products, #fruit-powder-products, #mushroom-products, #fresh-products) + .detail-products .item > div { text-align: center; }
