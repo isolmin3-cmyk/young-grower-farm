@@ -170,14 +170,12 @@ window.addEventListener('scroll', () => {
 document.querySelectorAll('.product-photo-carousel').forEach((carousel) => {
   const track = carousel.querySelector('.product-photo-track');
   const controls = carousel.querySelector('.product-photo-controls');
-  const count = carousel.querySelector('.product-photo-count');
   const buttons = [...controls.querySelectorAll('[data-photo-step]')];
   const slideCount = track.children.length;
   const currentSlide = () => Math.round(track.scrollLeft / track.clientWidth);
 
   function updateControls() {
     const index = currentSlide();
-    count.textContent = `${index + 1} / ${slideCount}`;
     buttons[0].disabled = index <= 0;
     buttons[1].disabled = index >= slideCount - 1;
   }

@@ -7,8 +7,8 @@
 <meta name="theme-color" content="#243f32">
 <title>농산물 가공 | 영글어농장</title>
 <link rel="icon" href="mark.svg">
-<link rel="stylesheet" href="style.css?v=processing-layout-swap">
-<script defer src="app.js?v=processing-layout-swap">
+<link rel="stylesheet" href="style.css?v=processing-image-overlay">
+<script defer src="app.js?v=processing-image-overlay">
 </script>
 </head>
 <body>
@@ -108,11 +108,13 @@
 <p>제철의 농산물을 더 다양한 모습으로</p>
 </div>
 </section>
-<div class="detail-layout wrap">
+<div class="detail-layout processing-layout">
 <article class="detail-article">
+<div class="wrap processing-intro">
 <span class="eyebrow">영글어농장</span>
 <h2>제철의 농산물을 더 다양한 모습으로</h2>
 <p class="lead">과일칩, 과일 분말과 과즙은 같은 농산물을 서로 다른 방식으로 즐길 수 있게 합니다.</p>
+</div>
 <div class="cultivation-cards processing-cards">
 <section class="cultivation-card">
 <div class="product-photo-carousel">
@@ -124,7 +126,6 @@
 </div>
 <div class="product-photo-controls" hidden>
 <button type="button" data-photo-step="-1" aria-label="과일칩 이전 사진" aria-controls="processing-photos-1">←</button>
-<span class="product-photo-count" aria-live="polite">1 / 4</span>
 <button type="button" data-photo-step="1" aria-label="과일칩 다음 사진" aria-controls="processing-photos-1">→</button>
 </div>
 </div>
@@ -141,7 +142,6 @@
 </div>
 <div class="product-photo-controls" hidden>
 <button type="button" data-photo-step="-1" aria-label="과일 분말 이전 사진" aria-controls="processing-photos-2">←</button>
-<span class="product-photo-count" aria-live="polite">1 / 2</span>
 <button type="button" data-photo-step="1" aria-label="과일 분말 다음 사진" aria-controls="processing-photos-2">→</button>
 </div>
 </div>
@@ -158,7 +158,6 @@
 </div>
 <div class="product-photo-controls" hidden>
 <button type="button" data-photo-step="-1" aria-label="과즙과 진액 이전 사진" aria-controls="processing-photos-3">←</button>
-<span class="product-photo-count" aria-live="polite">1 / 2</span>
 <button type="button" data-photo-step="1" aria-label="과즙과 진액 다음 사진" aria-controls="processing-photos-3">→</button>
 </div>
 </div>
@@ -168,7 +167,7 @@
 </div>
 </section>
 </div>
-<div class="article-bottom">
+<div class="article-bottom wrap">
 <a class="button" href="contact.html?v=history-lines-20261109">문의하기<span aria-hidden="true">↗</span>
 </a>
 <a class="text-link" href="overview.html?v=history-lines-20261109">CEO 인사말<span aria-hidden="true">↗</span>
