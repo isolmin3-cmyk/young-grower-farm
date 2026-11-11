@@ -101,7 +101,7 @@ function initializeScrollEffects() {
     ['.center-heading', 'down'],
     ['.showcase-card', 'up'],
     ['.corporate-pillars > a', 'up'],
-    ['.cultivation-card, .development-products .product-card', 'up'],
+    ['.cultivation-card', 'up'],
     ['.brand-story-row:not(.cultivation-article .brand-story-row), .brand-line', 'up'],
     ['.cultivation-article .brand-story-row:not(.reverse)', 'left'],
     ['.cultivation-article .brand-story-row.reverse', 'right'],
@@ -134,6 +134,34 @@ function initializeScrollEffects() {
       observer.observe(element);
     });
   });
+  const developmentCards = document.querySelectorAll('.development-products .product-card');
+  if (developmentCards.length) {
+    const developmentObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const cardHeight = entry.boundingClientRect.height;
+        const viewportHeight = entry.rootBounds.height;
+        // On short screens, a tall card can only fill the available viewport.
+        const ready = cardHeight <= viewportHeight
+          ? entry.intersectionRatio === 1
+          : entry.intersectionRect.height >= viewportHeight * 0.9;
+        if (ready) {
+          entry.target.classList.add('is-visible');
+          developmentObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: `-${document.querySelector('header').offsetHeight}px 0px 0px`,
+      threshold: Array.from({ length: 101 }, (_, index) => index / 100),
+    });
+
+    developmentCards.forEach((card, index) => {
+      card.classList.add('reveal');
+      card.style.setProperty('--reveal-delay', `${index * 140}ms`);
+      developmentObserver.observe(card);
+    });
+  }
   document.body.classList.add('motion-ready');
   document.addEventListener('focusin', (event) => {
     const element = event.target.closest('.reveal');
