@@ -101,9 +101,7 @@ function initializeScrollEffects() {
     ['.center-heading', 'down'],
     ['.showcase-card', 'up'],
     ['.corporate-pillars > a', 'up'],
-    ['.cultivation-card:not(.processing-cards .cultivation-card)', 'up'],
-    ['.processing-cards .cultivation-card', 'up', 220],
-    ['.development-products .product-card', 'up', 220],
+    ['.cultivation-card, .development-products .product-card', 'up'],
     ['.brand-story-row:not(.cultivation-article .brand-story-row), .brand-line', 'up'],
     ['.cultivation-article .brand-story-row:not(.reverse)', 'left'],
     ['.cultivation-article .brand-story-row.reverse', 'right'],
@@ -128,11 +126,11 @@ function initializeScrollEffects() {
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -25px 0px' });
 
-  targets.forEach(([selector, direction, stagger = 140]) => {
+  targets.forEach(([selector, direction]) => {
     document.querySelectorAll(selector).forEach((element, index) => {
       element.classList.add('reveal');
       element.dataset.direction = direction;
-      element.style.setProperty('--reveal-delay', `${(index % 3) * stagger}ms`);
+      element.style.setProperty('--reveal-delay', `${(index % 3) * 140}ms`);
       observer.observe(element);
     });
   });
