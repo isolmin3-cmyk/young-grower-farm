@@ -591,7 +591,7 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
   .detail-article .development-products { grid-template-columns: 1fr; }
 }
 
-.brand-story-row > :is(.chip-set-photo, .mushroom-intro-photo) img { object-fit: contain; }
+.brand-story-row > :is(.chip-set-photo, .mushroom-intro-photo, .gift-set-photo) img { object-fit: contain; }
 :is(.chip-intro-copy, .powder-intro-copy, .mushroom-intro-copy, .peach-intro-copy, .rice-intro-copy, .blueberry-intro-copy) > p:first-of-type { margin-top: 20px; }
 
 :is(#fruit-chip-products, #fruit-powder-products, #mushroom-products, #fresh-products, #blueberry-juice-title),
