@@ -503,8 +503,40 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
   .cultivation-gallery img { height: clamp(112px,27vw,180px); border-radius: 12px; }
 }
 
-.processing-article .brand-story-row > div:first-child img {
-  width: min(100%, 360px);
-  height: auto;
-  margin-inline: auto;
+.processing-cards { margin-top: var(--article-gap); }
+.processing-cards h3 { margin-bottom: 10px; font-size: clamp(20px,2vw,25px); }
+.product-photo-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
+.product-photo-track figure {
+  flex: 0 0 100%;
+  min-width: 0;
+  margin: 0;
+  scroll-snap-align: start;
+}
+.product-photo-track img {
+  height: clamp(210px,24vw,320px);
+  object-fit: contain;
+  background: #fff;
+}
+.product-photo-track figcaption { padding: 8px 12px; text-align: center; }
+.product-photo-controls:not([hidden]) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 8px 12px 0;
+}
+.product-photo-controls button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+}
+.product-photo-controls button:disabled { opacity: .4; cursor: default; }
+.product-photo-count { min-width: 48px; text-align: center; font-size: 13px; }
