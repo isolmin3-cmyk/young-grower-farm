@@ -591,8 +591,8 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
   .detail-article .development-products { grid-template-columns: 1fr; }
 }
 
-.brand-story-row > .chip-set-photo img { object-fit: contain; }
-:is(.chip-intro-copy, .powder-intro-copy) > p:first-of-type { margin-top: 20px; }
+.brand-story-row > :is(.chip-set-photo, .mushroom-intro-photo) img { object-fit: contain; }
+:is(.chip-intro-copy, .powder-intro-copy, .mushroom-intro-copy) > p:first-of-type { margin-top: 20px; }
 
-:is(#fruit-chip-products, #fruit-powder-products),
-:is(#fruit-chip-products, #fruit-powder-products) + .detail-products .item > div { text-align: center; }
+:is(#fruit-chip-products, #fruit-powder-products, #mushroom-products),
+:is(#fruit-chip-products, #fruit-powder-products, #mushroom-products) + .detail-products .item > div { text-align: center; }
