@@ -590,3 +590,5 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
 @media (max-width: 760px) {
   .detail-article .development-products { grid-template-columns: 1fr; }
 }
+
+.brand-story-row > .chip-set-photo img { object-fit: contain; }
