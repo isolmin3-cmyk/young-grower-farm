@@ -24,6 +24,11 @@ menuButtons.forEach((button) => {
   });
 });
 
+navigation.addEventListener('click', (event) => {
+  const link = event.target.closest('a[href]');
+  if (link?.hash && link.pathname === location.pathname) closeMobileMenu();
+});
+
 mobileButton.addEventListener('click', () => {
   const shouldOpen = mobileButton.getAttribute('aria-expanded') !== 'true';
   closeDropdowns();
