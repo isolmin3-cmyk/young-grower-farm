@@ -614,3 +614,5 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
   .certificate-story { grid-template-columns: minmax(0, 1fr); }
   .company-certificate { justify-self: center; }
 }
+
+.season-copy > p { margin-top: 20px; }
