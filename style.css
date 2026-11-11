@@ -596,3 +596,20 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
 
 :is(#fruit-chip-products, #fruit-powder-products, #mushroom-products, #fresh-products, #blueberry-juice-title),
 :is(#fruit-chip-products, #fruit-powder-products, #mushroom-products, #fresh-products, #blueberry-juice-title) ~ .detail-products .item > div { text-align: center; }
+
+.company-news-feature .company-news-photo {
+  padding: 20px;
+  border-radius: 22px;
+  background: var(--paper);
+}
+.company-news-feature > .company-news-photo img {
+  height: clamp(240px, 30vw, 360px);
+  object-fit: contain;
+  border-radius: 0;
+}
+.company-news-feature h2, .company-news-entry h2 { margin-bottom: 16px; }
+.company-news-entry {
+  padding: clamp(22px, 4vw, 44px);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+}
