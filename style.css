@@ -576,6 +576,9 @@ header.is-scrolled { box-shadow: 0 5px 25px #20352612; }
 }
 .product-photo-controls button:disabled { visibility: hidden; }
 
+.brand-article > :is(.eyebrow, h2, .lead) { text-align: center; }
+.brand-article > .lead { margin-inline: auto; }
+
 .development-intro { text-align: center; }
 .development-intro .lead { max-width: 72ch; margin-inline: auto; }
 .detail-article .development-products {
