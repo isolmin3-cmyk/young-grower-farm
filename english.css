@@ -317,19 +317,11 @@ nav { display: flex; align-items: center; gap: clamp(16px, 2.1vw, 32px); }
 }
 .sector-tabs a { padding-block: 8px; font-size: 14px; font-weight: 600; }
 .sector-tabs a:hover { text-decoration: underline; text-underline-offset: 5px; }
-.language-link { padding: 8px 12px; border: 1px solid var(--line); font-size: 12px; white-space: nowrap; }
-html[lang="en"] body { word-break: normal; }
-html[lang="en"] .hero-content h1 { max-width: 950px; }
-html[lang="en"] .hero-content p { max-width: 680px; }
-html[lang="en"] .story-milestones { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-html[lang="en"] .brand img { width: 120px; }
 #business .three-grid { margin-top: 35px; }
 .section-intro + .research-grid { margin-top: 32px; }
 .header-inner { gap: 20px; }
 @media (max-width: 1000px) {
-  html[lang="en"] .story-milestones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 600px) {
-  html[lang="en"] .story-milestones { grid-template-columns: 1fr; }
   .sector-tabs { justify-content: flex-start; gap: 8px 18px; }
 }
