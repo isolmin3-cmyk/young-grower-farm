@@ -36,7 +36,7 @@ p { color: var(--muted); }
 header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); background: #fff; }
 .header-inner { min-height: 102px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .brand { display: flex; flex-direction: column; gap: 5px; flex-shrink: 0; }
-.brand img { width: 146px; height: 43px; object-fit: contain; object-position: left; }
+.brand img { width: 176px; height: 52px; object-fit: contain; object-position: left; }
 .brand span { color: var(--ink); font-size: 9px; letter-spacing: .17em; font-weight: 700; }
 nav { display: flex; align-items: center; gap: clamp(16px, 2.1vw, 32px); }
 .nav-group { position: relative; }
