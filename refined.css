@@ -194,3 +194,17 @@ header { border-color: #eceeea; }
 
 .clean-hero-copy h1, .clean-hero-copy p, .clean-hero-copy .eyebrow { text-shadow: 0 2px 14px #0005; }
 @media (max-width: 760px) { .clean-hero-shade { background: linear-gradient(180deg, #071b1370, #071b13c9); } }
+
+/* Outline action on the homepage hero. */
+.clean-hero-copy .button {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+  transition: background-color .25s ease;
+}
+.clean-hero-copy .button:hover,
+.clean-hero-copy .button:focus-visible {
+  background: rgb(8 18 14 / 18%);
+  border-color: #fff;
+  color: #fff;
+}
