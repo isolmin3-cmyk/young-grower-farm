@@ -269,3 +269,18 @@ document.querySelectorAll('.farm-journey').forEach(journey => {
   panels.forEach((panel, index) => { panel.hidden = index !== 0; });
   tablist.hidden = false;
 });
+
+if (document.body.classList.contains('home-redesign') && !reducedMotion.matches && 'IntersectionObserver' in window) {
+  const refinedObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      refinedObserver.unobserve(entry.target);
+      entry.target.animate(
+        [{ opacity: .15, transform: 'translateY(22px)' }, { opacity: 1, transform: 'translateY(0)' }],
+        { duration: 650, easing: 'ease-out' },
+      );
+    }
+  }, { threshold: .16 });
+  document.querySelectorAll('.intro-editorial > div, .clean-section-heading, .clean-sector, .clean-product, .clean-research > div, .clean-evidence-list > a')
+    .forEach(element => refinedObserver.observe(element));
+}
