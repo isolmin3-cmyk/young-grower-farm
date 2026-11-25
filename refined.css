@@ -198,3 +198,7 @@ header { border-color: #eceeea; }
 .clean-sector h3 { gap: 14px; font-size: clamp(19px, 1.7vw, 23px); line-height: 1.5; }
 .clean-sector h3 span { flex-shrink: 0; }
 .sector-image-note { display: block; margin-top: 12px; color: var(--muted); font-size: 11px; }
+
+.clean-sector .mushroom-closeup img { object-position: left center; transform: scale(2.8); transform-origin: 18% 78%; }
+.clean-sector:hover .mushroom-closeup img { transform: scale(2.9); }
+@media (prefers-reduced-motion: reduce) { .clean-sector:hover .mushroom-closeup img { transform: scale(2.8); } }
