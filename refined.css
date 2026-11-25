@@ -194,3 +194,7 @@ header { border-color: #eceeea; }
 
 .clean-hero-copy h1, .clean-hero-copy p, .clean-hero-copy .eyebrow { text-shadow: 0 2px 14px #0005; }
 @media (max-width: 760px) { .clean-hero-shade { background: linear-gradient(180deg, #071b1370, #071b13c9); } }
+
+.clean-sector h3 { gap: 14px; font-size: clamp(19px, 1.7vw, 23px); line-height: 1.5; }
+.clean-sector h3 span { flex-shrink: 0; }
+.sector-image-note { display: block; margin-top: 12px; color: var(--muted); font-size: 11px; }
