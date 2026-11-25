@@ -202,3 +202,5 @@ header { border-color: #eceeea; }
 .clean-sector .mushroom-closeup img { object-position: left center; transform: scale(2.8); transform-origin: 18% 78%; }
 .clean-sector:hover .mushroom-closeup img { transform: scale(2.9); }
 @media (prefers-reduced-motion: reduce) { .clean-sector:hover .mushroom-closeup img { transform: scale(2.8); } }
+
+.clean-product .product-cutout { padding-block: 12px; }
