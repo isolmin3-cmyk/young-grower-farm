@@ -218,3 +218,64 @@ nav { display: flex; align-items: center; gap: clamp(16px, 2.1vw, 32px); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Company narrative and the consolidated product overview. */
+.story-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; margin-top: 42px; }
+.story-steps > section { border-top: 2px solid #839778; padding-top: 23px; }
+.story-steps .eyebrow { margin-bottom: 12px; }
+.story-steps h3 { font-size: 23px; }
+.story-steps p { font-size: 15px; margin-top: 16px; }
+.story-milestones { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 25px; margin-block: 48px 25px; }
+.story-milestones > section { padding-top: 22px; border-top: 1px solid #b7c4ae; }
+.story-milestones time { display: block; font-size: 31px; line-height: 1.4; color: var(--green); margin-bottom: 18px; }
+.story-milestones h3 { font-size: 21px; }
+.story-milestones p { font-size: 14px; margin-top: 15px; }
+.research-grid > section { border-top: 2px solid #7d9669; padding: 28px; background: var(--paper); }
+.research-grid > section p { margin-top: 18px; }
+.soft .research-grid > section { background: #fff; }
+.section .brand-story-row + .facility-grid { margin-top: 48px; margin-bottom: 0; }
+.company-outcome { display: flex; align-items: center; justify-content: space-between; gap: 45px; }
+.company-outcome p { margin-top: 22px; max-width: 780px; }
+.company-outcome > a { white-space: nowrap; }
+.evidence-row { display: grid; grid-template-columns: .8fr 1.2fr; gap: 65px; align-items: center; padding-block: 55px; border-bottom: 1px solid var(--line); }
+.evidence-row > figure { display: flex; flex-direction: column; align-items: center; background: var(--paper); padding: 30px 20px; }
+.evidence-row img { max-width: min(100%, 320px); max-height: 420px; object-fit: contain; width: auto; }
+.evidence-row figcaption { font-size: 12px; color: var(--muted); margin-top: 20px; }
+.evidence-row h2 { margin-bottom: 25px; }
+.evidence-row p + p { margin-top: 18px; }
+.evidence-row.reverse { grid-template-columns: 1.2fr .8fr; }
+.evidence-row.reverse > figure { order: 2; }
+.evidence-note { font-size: 13px; }
+.portfolio-nav { display: flex; flex-wrap: wrap; gap: 16px 28px; border-block: 1px solid var(--line); padding-block: 18px; }
+.portfolio-nav a { font-size: 14px; padding-block: 7px; font-weight: 600; }
+.portfolio-nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.portfolio-chapter { padding-block: 55px; border-bottom: 1px solid var(--line); }
+.portfolio-chapter:last-child { border-bottom: 0; padding-bottom: 0; }
+.portfolio-chapter > p { margin-top: 22px; max-width: 900px; }
+.portfolio-heading p { margin-top: 23px; max-width: 950px; }
+.portfolio-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; margin-top: 35px; }
+.portfolio-items > figure { display: grid; grid-template-columns: .8fr 1fr; gap: 22px; align-items: center; }
+.portfolio-items .contain { padding: 18px; height: 220px; }
+.portfolio-items img { width: 100%; height: 100%; object-fit: contain; }
+.portfolio-items h3 { font-size: 22px; }
+.portfolio-items p { margin-top: 17px; font-size: 15px; }
+.detail-article > .section .wrap { padding-inline: 28px; }
+@media (max-width: 1000px) {
+  .story-steps, .story-milestones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .portfolio-items { grid-template-columns: 1fr; }
+  .portfolio-items > figure { grid-template-columns: 220px 1fr; }
+  .evidence-row, .evidence-row.reverse { gap: 32px; }
+}
+@media (max-width: 600px) {
+  .story-steps, .story-milestones { grid-template-columns: 1fr; gap: 25px; }
+  .story-milestones > section { display: grid; grid-template-columns: 75px 1fr; gap: 10px 20px; }
+  .story-milestones time { grid-row: span 2; font-size: 26px; margin-bottom: 0; }
+  .story-milestones p { margin-top: 0; }
+  .company-outcome { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .evidence-row, .evidence-row.reverse { grid-template-columns: 1fr; gap: 32px; padding-block: 36px; }
+  .evidence-row.reverse > figure { order: 0; }
+  .portfolio-items > figure { grid-template-columns: 120px minmax(0, 1fr); gap: 20px; }
+  .portfolio-items .contain { height: 170px; padding: 8px; }
+  .portfolio-items h3 { font-size: 21px; }
+  .portfolio-items p { font-size: 14px; }
+}
