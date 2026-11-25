@@ -92,8 +92,8 @@ header { border-color: #eceeea; }
 .clean-facility-shade { background: #14291c79; }
 .clean-facility .clean-label { color: white; }
 .clean-facility-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.clean-facility-grid a { min-height: 260px; display: flex; flex-direction: column; padding: 32px; background: #ffffffed; color: var(--ink); border-radius: 8px; transition: transform .3s; }
-.clean-facility-grid a:nth-child(2) { background: #fff; }
+.clean-facility-grid a { min-height: 260px; display: flex; flex-direction: column; padding: 32px; background: rgb(255 255 255 / 72%); color: var(--ink); border-radius: 8px; transition: transform .3s; }
+.clean-facility-grid a:nth-child(2) { background: rgb(255 255 255 / 72%); }
 .clean-facility-grid h3 { font-size: 24px; font-weight: 500; }
 .clean-facility-grid p { font-size: 15px; margin-top: 18px; }
 .clean-facility-grid span { margin-top: auto; padding-top: 32px; font-size: 13px; }
