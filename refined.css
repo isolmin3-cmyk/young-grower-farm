@@ -205,4 +205,6 @@ header { border-color: #eceeea; }
 
 .clean-product .product-cutout { padding-block: 12px; }
 
-.clean-facility .clean-section-heading { text-shadow: 0 2px 12px rgb(10 30 20 / 55%); }
+.clean-facility .clean-section-heading, .clean-facility .clean-label { color: #18211f; text-shadow: none; }
+
+.clean-facility-grid a { border: 1px solid rgb(255 255 255 / 85%); box-shadow: 0 8px 24px rgb(20 41 28 / 14%); }
