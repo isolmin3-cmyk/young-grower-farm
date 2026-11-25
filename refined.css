@@ -89,7 +89,7 @@ header { border-color: #eceeea; }
 .clean-facility { position: relative; isolation: isolate; padding-block: 95px; color: white; }
 .clean-facility > img, .clean-facility-shade { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
 .clean-facility > img { object-fit: cover; }
-.clean-facility-shade { background: #14291c79; }
+.clean-facility-shade { background: rgb(20 41 28 / 30%); }
 .clean-facility .clean-label { color: white; }
 .clean-facility-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .clean-facility-grid a { min-height: 260px; display: flex; flex-direction: column; padding: 32px; background: rgb(255 255 255 / 52%); color: var(--ink); border-radius: 8px; transition: transform .3s; }
