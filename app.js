@@ -232,3 +232,40 @@ document.querySelectorAll('.product-photo-carousel').forEach((carousel) => {
   updateControls();
   controls.hidden = false;
 });
+
+document.querySelectorAll('.farm-journey').forEach(journey => {
+  const tablist = journey.querySelector('[role="tablist"]');
+  const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+  const panels = Array.from(journey.querySelectorAll('[role="tabpanel"]'));
+
+  function selectStep(index, focus = false) {
+    tabs.forEach((tab, i) => {
+      tab.setAttribute('aria-selected', String(i === index));
+      tab.tabIndex = i === index ? 0 : -1;
+      panels[i].hidden = i !== index;
+    });
+    if (focus) tabs[index].focus();
+    if (!reducedMotion.matches) {
+      panels[index].animate(
+        [{ opacity: .4, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }],
+        { duration: 320, easing: 'ease-out' },
+      );
+    }
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectStep(index));
+    tab.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      selectStep(next, true);
+    });
+  });
+  panels.forEach((panel, index) => { panel.hidden = index !== 0; });
+  tablist.hidden = false;
+});
